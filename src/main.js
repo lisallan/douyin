@@ -1,17 +1,15 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
+// 全局CSS样式
 import './style.css'
+// px转rem适配
+import 'amfe-flexible'
+
 import App from './App.vue'
+
 const app = createApp(App)
-// 导入
-import { createPinia } from 'pinia'
-// 赋值给常量
-const pinia = createPinia()
-// 1. 引入你需要的组件
-import { Swipe, SwipeItem, Button, Grid, GridItem, Image as VanImage, Col,
-Row, Divider } from 'vant';
-// 2. 引入组件样式
-import 'vant/lib/index.css';
-app.config.devtools = true;
-// 3. 注册你需要的组件
-app.use(pinia).use(Swipe).use(SwipeItem).use(Grid).use(GridItem).use(VanImage).use(Col).use(Row).use(Divider).use(Button);;
+// 引入路由
+import router from "@/router/index.js";
+
+app.use(router)
+
 app.mount('#app')
