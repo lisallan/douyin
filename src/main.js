@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 const app = createApp(App)
+import router from './router'
+
+import 'amfe-flexible'
 // 导入
 import { createPinia } from 'pinia'
 // 赋值给常量
@@ -13,5 +16,5 @@ Row, Divider } from 'vant';
 import 'vant/lib/index.css';
 app.config.devtools = true;
 // 3. 注册你需要的组件
-app.use(pinia).use(Swipe).use(SwipeItem).use(Grid).use(GridItem).use(VanImage).use(Col).use(Row).use(Divider).use(Button);;
+app.use(router).use(pinia).use(Swipe).use(SwipeItem).use(Grid).use(GridItem).use(VanImage).use(Col).use(Row).use(Divider).use(Button);;
 app.mount('#app')
