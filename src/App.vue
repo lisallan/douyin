@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <div>
+    <router-view/>
+  </div>
 </template>
 <script setup>
 // 导入接口
@@ -12,6 +14,9 @@ async function getUsersList() {
 }
 </script>
 
-<style>
-
+<style scoped>
+div {
+  margin: 0;
+  padding: 0;
+}
 </style>

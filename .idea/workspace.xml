@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a452d18-3777-4790-b5cc-47fe5e445787" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/apis/getEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/image/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/comm/tabbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Home/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Message.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/followed.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/uploadVideo.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +51,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/views/Home.vue" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -63,6 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "lwc__develop",
+    "last_opened_file_path": "D:/vue-project/douyin/src/assets/image",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,7 +89,11 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\vue-project\douyin\src\assets\image" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\vue-project\douyin\src\views\Home" />
       <recent name="D:\vue-project\douyin" />
     </key>
   </component>
@@ -109,8 +123,44 @@
       <option name="presentableId" value="Default" />
       <updated>1694761932164</updated>
       <workItem from="1694761933315" duration="971000" />
-      <workItem from="1694763051067" duration="5916000" />
+      <workItem from="1694763051067" duration="6959000" />
+      <workItem from="1694774037237" duration="10279000" />
+      <workItem from="1694946648691" duration="8971000" />
+      <workItem from="1694997102240" duration="22462000" />
     </task>
+    <task id="LOCAL-00001" summary="创建路由/增加移动端适配rem/Home主页">
+      <option name="closed" value="true" />
+      <created>1694769180736</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694769180736</updated>
+    </task>
+    <task id="LOCAL-00002" summary="创建路由/增加移动端适配rem/Home主页">
+      <option name="closed" value="true" />
+      <created>1694769613042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694769613042</updated>
+    </task>
+    <task id="LOCAL-00003" summary="创建路由/增加移动端适配rem/Home主页">
+      <option name="closed" value="true" />
+      <created>1694769735012</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694769735012</updated>
+    </task>
+    <task id="LOCAL-00004" summary="创建路由/增加移动端适配rem/Home主页">
+      <option name="closed" value="true" />
+      <created>1694769830981</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694769830981</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,5 +176,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建路由/增加移动端适配rem/Home主页" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建路由/增加移动端适配rem/Home主页" />
   </component>
 </project>
