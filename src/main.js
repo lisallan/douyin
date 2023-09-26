@@ -1,20 +1,49 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
-const app = createApp(App)
-import router from './router'
 
-import 'amfe-flexible'
-// 导入
+
+import { createApp, nextTick } from 'vue'
+import App from './App.vue'
+import Dom from './utils/dom'
+import {adminStore} from '../src/store/admin'
+//router
+import router from './router'
+//piain
 import { createPinia } from 'pinia'
-// 赋值给常量
 const pinia = createPinia()
-// 1. 引入你需要的组件
-import { Swipe, SwipeItem, Button, Grid, GridItem, Image as VanImage, Col,
-Row, Divider } from 'vant';
-// 2. 引入组件样式
-import 'vant/lib/index.css';
-app.config.devtools = true;
-// 3. 注册你需要的组件
-app.use(router).use(pinia).use(Swipe).use(SwipeItem).use(Grid).use(GridItem).use(VanImage).use(Col).use(Row).use(Divider).use(Button);;
-app.mount('#app')
+const app = createApp(App);
+
+//自定义指令
+app.directive('redHeart', (e, binding, vnode) => {
+   
+    // 双击
+    var clicked_count = 0;
+    let id = 'a' + Date.now()
+ 
+    document.addEventListener('ontouchstart' in document ? 'touchstart' : 'mousedown', function (e) {
+        const x = e.touches[0].pageX;
+        const y = e.touches[0].pageY;
+        clicked_count++;
+        setTimeout(function () {
+            clicked_count = 0;
+        }, 500);
+        if (clicked_count > 1) {
+            const store = adminStore()
+            store.flag = true
+            let elWidth = 80
+            let template = `<img style="position: absolute;top:${y}px;left:${x}px" class='left love-dbclick' id="${id}" src="../src/assets/img/icon/loved.svg">`
+            let el = new Dom().create(template)
+            el.css({ top: el.y - elWidth - 40, left: el.x - elWidth / 2, })
+            new Dom(`#${binding.value}`).append(el)
+            setTimeout(() => {
+                new Dom(`#${id}`).remove()
+            }, 1000)
+            clicked_count = 0;
+        }
+
+    }, false);
+
+
+
+
+})
+
+app.use(pinia).use(router).mount('#app')

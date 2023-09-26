@@ -4,8 +4,7 @@ import axios from 'axios'
 // 创建axios实例
 const service = axios.create({
     // 公共接口前缀 正常应该从环境变量中获取
-    baseURL: 'http://43.138.15.137:3000/api/',
-    timeout: 3000,
+    baseURL:'/api',
     // 表示跨域请求时是否需要使用凭证
     withCredentials: false // default
 })
@@ -22,7 +21,7 @@ service.interceptors.request.use(function(config) {
 // 添加响应拦截器
 service.interceptors.response.use(function (response) {
     // 对响应数据做点什么 做一些接口请求成功以后的提示处理、关闭loading
-    return response;
+    return response.data;
   }, function (error) {
     // 对响应错误做点什么，做一些接口请求失败以后的提示处理，比如404路径错误、403没有权限等等处理
     return Promise.reject(error);
